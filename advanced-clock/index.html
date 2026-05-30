@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced World Clock - Digital & Analog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌍 Advanced World Clock</h1>
+            <div class="controls">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="formatToggle" onchange="toggleTimeFormat()">
+                    <span class="slider"></span>
+                    <span class="label-text">12/24 Hour</span>
+                </label>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="viewToggle" onchange="toggleClockView()">
+                    <span class="slider"></span>
+                    <span class="label-text">Digital/Analog</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="clocks-grid" id="clocksGrid"></div>
+
+        <div class="timezone-section">
+            <button class="btn btn-add" onclick="addCustomTimezone()">+ Add Timezone</button>
+            <button class="btn btn-remove" onclick="removeLastTimezone()">- Remove Last</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
